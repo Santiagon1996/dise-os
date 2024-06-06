@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:wght@300;400;700&display=swap');
+
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para el cuerpo de la página */
+body {
+    background-color: #E6D6FC;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    color: #6C727F
+}
+
+.card__conteiner {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.card__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid #FAFAF9;
+    height: 500px;
+    max-width: 100%;
+    margin: 20px;
+    padding-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FAFAF9;
+    border-radius: 20px;
+    border: #FAFAF9;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 3px 3px 10px #883AE1, -3px 3px 10px #883AE1;
+}
+
+.card__img {
+    object-fit: contain;
+    border-radius:20px 20px 0 0;
+    border-color: #FAFAF9;
+    width: 100%;
+    height: auto;
+    transition: all 0.3 ease-in-out;
+}
+
+.card__img:hover {
+    transform: scale(1.1);
+}
+
+.card__content {
+    padding: 16px; /* Aplicamos el padding aquí */
+    border-radius: 0 0 20px 20px; /* Aplicamos border-radius solo en la parte inferior */
+    overflow: hidden; /* Aseguramos que el contenido no se desborde */
+}
+.card__btn {
+    margin-top: 6px;
+    padding: 5px;
+    width: auto;
+    align-self: start;
+    color: #883AE1;
+    background-color: #E6D6FC;
+    border-radius: 20px;
+    border-color: #FAFAF9;
+    padding: 10px 15px;
+}
+.card__btn:hover{
+    border-bottom: 3px solid #883AE1;
+}
+.card__titulo {
+    font-size: 18px;
+    margin: 16px;
+    margin-left: 0px;
+    margin-bottom: 6px;
+}
+
+.card__firma {
+    font-size: 10px;
+    margin: 20px 0px;
+}
+
+@media (max-width: 768px) {
+    .card__conteiner {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    .card__wrapper {
+        flex-wrap: wrap;
+    }
+    .card {
+        height: auto;
+        
+    }
+    .card__btn {
+        padding: 4px;
+        /* Reducido el padding interno del botón */
+    }
+}
